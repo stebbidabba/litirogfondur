@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fyrirtækið - Litir og Föndur | Saga og starfsfólk</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            500: '#3b82f6',
+                            600: '#2563eb', 
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Link to your external CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50 text-gray-800 min-h-screen">
+
+    <!-- Header & Navigation -->
+    <header class="glass-nav fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 bg-gradient-to-br from-brand-500 to-brand-700 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:shadow-xl transition-all duration-300">
+                    L<span class="text-red-400">&</span>F
+                </div>
+                <span class="text-2xl font-playfair font-bold logo-text tracking-tight">Litir og Föndur</span>
+            </a>
+            
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <ul id="menu" class="hidden md:flex md:items-center md:space-x-8 text-base font-medium">
+                <li><a href="index.html" class="nav-link">Heim</a></li>
+                <li><a href="fyrirtaeki.html" class="nav-link text-brand-700 active">Fyrirtækið</a></li>
+                <li><a href="vorur.html" class="nav-link">Vörur</a></li>
+                <li><a href="frodleiksmolar.html" class="nav-link">Fróðleiksmolar</a></li>
+                <li><a href="index.html#courses" class="nav-link">Námskeið</a></li>
+                <li><a href="index.html#contact" class="nav-link">Samband</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu-hidden md:hidden">
+            <div class="px-6 py-4 bg-white/95 backdrop-blur-xl border-t border-gray-200/50">
+                <ul class="space-y-4">
+                    <li><a href="index.html" class="mobile-nav-link">Heim</a></li>
+                    <li><a href="fyrirtaeki.html" class="mobile-nav-link text-brand-700">Fyrirtækið</a></li>
+                    <li><a href="vorur.html" class="mobile-nav-link">Vörur</a></li>
+                    <li><a href="frodleiksmolar.html" class="mobile-nav-link">Fróðleiksmolar</a></li>
+                    <li><a href="index.html#courses" class="mobile-nav-link">Námskeið</a></li>
+                    <li><a href="index.html#contact" class="mobile-nav-link">Samband</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-24">
+        
+        <!-- Hero Section -->
+        <section class="relative py-20 bg-gradient-to-br from-blue-600/10 via-indigo-500/5 to-purple-600/10">
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%234f46e5" fill-opacity="0.03"%3E%3Ccircle cx="30" cy="30" r="4"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+            
+            <div class="relative container mx-auto px-6 text-center">
+                <div class="max-w-4xl mx-auto reveal">
+                    <h1 class="text-4xl md:text-6xl font-playfair font-bold text-gray-900 mb-6 leading-tight">
+                        Saga <span class="text-brand-600">fyrirtækisins</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-600 mb-8">
+                        Þrjár kynslóðir af myndlistarsölu og þjónustu síðan 1947
+                    </p>
+                    <div class="flex justify-center space-x-8 text-center">
+                        <div class="glass-card px-6 py-4">
+                            <div class="text-3xl font-bold text-brand-600">75+</div>
+                            <div class="text-sm text-gray-600">ár í rekstri</div>
+                        </div>
+                        <div class="glass-card px-6 py-4">
+                            <div class="text-3xl font-bold text-brand-600">750</div>
+                            <div class="text-sm text-gray-600">fermetrar</div>
+                        </div>
+                        <div class="glass-card px-6 py-4">
+                            <div class="text-3xl font-bold text-brand-600">5</div>
+                            <div class="text-sm text-gray-600">starfsmenn</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-4xl font-playfair font-bold text-gray-900 mb-4">Tímalína fyrirtækisins</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">Fylgdu sögu Litir og Föndur í gegnum áratugina</p>
+                </div>
+                
+                <div class="max-w-4xl mx-auto space-y-12">
+                    <!-- Timeline Item 1947 -->
+                    <div class="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-8 reveal">
+                        <div class="flex-shrink-0 w-24 text-center">
+                            <div class="text-2xl font-bold text-brand-600 bg-brand-50 rounded-lg py-2 px-4">1947</div>
+                        </div>
+                        <div class="glass-card flex-1">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-paint-brush text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Stofnun fyrirtækisins</h3>
+                                    <p class="text-gray-600">Fyrirtækið var upphaflega stofnað af Ágústi Hákonarsyni skrifstofumálara og myndlistarmanni undir nafninu <strong>Skiltagerðin</strong>. Fyrirtækið verslaði með myndlistavörur og starfrækti skiltagerð.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 1979 -->
+                    <div class="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-8 reveal">
+                        <div class="flex-shrink-0 w-24 text-center">
+                            <div class="text-2xl font-bold text-brand-600 bg-brand-50 rounded-lg py-2 px-4">1979</div>
+                        </div>
+                        <div class="glass-card flex-1">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-store text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Skipti og endurskipulagning</h3>
+                                    <p class="text-gray-600">Fyrirtækinu var skipt niður. Skiltagerðin var rekin sem heildsala en smásöluverslunin hlaut nafnið <strong>Litir og Föndur</strong> og var keypt af Guðfinnu Hjalmarsdóttur, myndlistakonu.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 1997 -->
+                    <div class="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-8 reveal">
+                        <div class="flex-shrink-0 w-24 text-center">
+                            <div class="text-2xl font-bold text-brand-600 bg-brand-50 rounded-lg py-2 px-4">1997</div>
+                        </div>
+                        <div class="glass-card flex-1">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-handshake text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Sameining fyrirtækja</h3>
+                                    <p class="text-gray-600">Fyrirtækin voru sameinuð undir nafninu <strong>Litir og Föndur – Handlist ehf.</strong> eftir að Guðfinna og eiginmaður hennar Grímur Jóhann Ingólfsson tóku við innflutningsversluninni Handlist.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2004 -->
+                    <div class="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-8 reveal">
+                        <div class="flex-shrink-0 w-24 text-center">
+                            <div class="text-2xl font-bold text-brand-600 bg-brand-50 rounded-lg py-2 px-4">2004</div>
+                        </div>
+                        <div class="glass-card flex-1">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-expand-arrows-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Stækkun til Kópavogs</h3>
+                                    <p class="text-gray-600">Ný og fjölbreytt verslun var opnuð að <strong>Smiðjuvegi 4 í Kópavogi</strong>. Verslunin var byggð upp á sama hátt og verslunin á Skólavörðustíg.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2009 -->
+                    <div class="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-8 reveal">
+                        <div class="flex-shrink-0 w-24 text-center">
+                            <div class="text-2xl font-bold text-brand-600 bg-brand-50 rounded-lg py-2 px-4">2009</div>
+                        </div>
+                        <div class="glass-card flex-1">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-building text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Flutningur í stærra rými</h3>
+                                    <p class="text-gray-600">Verslunin flutti í stærra húsnæði að <strong>Smiðjuvegi 5</strong> með fjölda einkabílastæða og betri aðstöðu.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2016 -->
+                    <div class="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-8 reveal">
+                        <div class="flex-shrink-0 w-24 text-center">
+                            <div class="text-2xl font-bold text-brand-600 bg-brand-50 rounded-lg py-2 px-4">2016</div>
+                        </div>
+                        <div class="glass-card flex-1">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-brand-500 to-brand-600 rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-star text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Ein verslun í Kópavogi</h3>
+                                    <p class="text-gray-600">Þann 20. febrúar voru verslanirnar sameinaðar á <strong>Smiðjuvegi 5 í Kópavogi</strong> í 750 fermetra rými þar sem vel fer um fyrirtækið í dag.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="py-20 bg-gradient-to-br from-gray-50 to-blue-50/30">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-4xl font-playfair font-bold text-gray-900 mb-4">Starfsfólkið okkar</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">Reynsla og þekking í þjónustu við myndlistarmenn</p>
+                </div>
+                
+                <div class="max-w-4xl mx-auto">
+                    <!-- Management -->
+                    <div class="glass-card mb-8 reveal text-center">
+                        <div class="w-20 h-20 bg-gradient-to-br from-brand-500 to-brand-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-user-tie text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-6">Stjórnun</h3>
+                        <div class="bg-brand-50 rounded-lg p-6 mb-4 max-w-md mx-auto">
+                            <p class="text-lg font-semibold text-brand-800">Hjalmar Axel Ingibergsson</p>
+                            <p class="text-brand-600">Verslunar- og innkaupastjóri</p>
+                        </div>
+                    </div>
+
+                    <!-- Team Members -->
+                    <div class="glass-card reveal">
+                        <div class="text-center mb-6">
+                            <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-users text-white text-3xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-6">Starfsmenn</h3>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div class="bg-white rounded-lg p-4 border border-gray-200">
+                                <h4 class="font-semibold text-gray-900">Guðfinna Anna Hjalmarsdóttir</h4>
+                                <p class="text-gray-600 text-sm">Eigandi og myndlistarkona</p>
+                            </div>
+                            
+                            <div class="bg-white rounded-lg p-4 border border-gray-200">
+                                <h4 class="font-semibold text-gray-900">Grímur Ingólfsson</h4>
+                                <p class="text-gray-600 text-sm">Húsgagnasmiður og meðeigandi</p>
+                            </div>
+                            
+                            <div class="bg-white rounded-lg p-4 border border-gray-200">
+                                <h4 class="font-semibold text-gray-900">Freydís E. Garðarsdóttir</h4>
+                                <p class="text-gray-600 text-sm">Starfsmaður</p>
+                            </div>
+                            
+                            <div class="bg-white rounded-lg p-4 border border-gray-200">
+                                <h4 class="font-semibold text-gray-900">Elísabet Elín Finnsdóttir</h4>
+                                <p class="text-gray-600 text-sm">Starfsmaður</p>
+                            </div>
+                        </div>
+
+                        <div class="p-6 bg-blue-50 rounded-lg border border-blue-200">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-graduation-cap text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-blue-800 mb-2">Þekking og menntun</h4>
+                                    <p class="text-blue-700">Starfsfólk okkar er með góða menntun á sviði myndlistar og handmennta og hefur víðtæka þekkingu á þeim vörum sem verslunin býður upp á. Við leggjum áherslu á að veita faglega ráðgjöf og hjálp við val á efnum og verkfærum.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-gradient-to-br from-brand-600 to-brand-700">
+            <div class="container mx-auto px-6 text-center">
+                <div class="max-w-3xl mx-auto reveal">
+                    <h2 class="text-4xl font-playfair font-bold text-white mb-6">Komdu og kynntu þér úrvalið</h2>
+                    <p class="text-xl text-blue-100 mb-8">Við hlökkum til að hitta þig í versluninni okkar og hjálpa þér að finna réttu efnin fyrir þitt næsta listaverk</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="index.html#contact" class="btn-secondary bg-white text-brand-700 hover:bg-gray-50">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            Finndu okkur
+                        </a>
+                        <a href="index.html#products" class="btn-secondary bg-transparent text-white border-white hover:bg-white hover:text-brand-700">
+                            <i class="fas fa-shopping-bag mr-2"></i>
+                            Skoða vörur
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
+        <!-- Background pattern -->
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.03"%3E%3Ccircle cx="20" cy="20" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        
+        <div class="relative container mx-auto px-6 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Company Info -->
+                <div class="text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-br from-brand-500 to-brand-700 rounded-xl flex items-center justify-center text-white font-bold">
+                            L<span class="text-red-400">&</span>F
+                        </div>
+                        <span class="text-2xl font-playfair font-bold">Litir og Föndur</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Íslands fremsta myndlistarverslun síðan 1947. Þrjár kynslóðir af þekkingu og þjónustu.
+                    </p>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="text-center md:text-left">
+                    <h4 class="text-lg font-semibold mb-6">Flýtileiðir</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#products" class="text-gray-300 hover:text-white transition-colors">Vörur</a></li>
+                        <li><a href="index.html#courses" class="text-gray-300 hover:text-white transition-colors">Námskeið</a></li>
+                        <li><a href="fyrirtaeki.html" class="text-gray-300 hover:text-white transition-colors">Um okkur</a></li>
+                        <li><a href="frodleiksmolar.html" class="text-gray-300 hover:text-white transition-colors">Fróðleiksmolar</a></li>
+                        <li><a href="index.html#contact" class="text-gray-300 hover:text-white transition-colors">Samband</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="text-center md:text-left">
+                    <h4 class="text-lg font-semibold mb-6">Samband</h4>
+                    <div class="space-y-3 text-gray-300">
+                        <div class="flex items-center justify-center md:justify-start">
+                            <i class="fas fa-map-marker-alt mr-3 text-brand-400"></i>
+                            <span>Smiðjuvegur 5, 200 Kópavogur</span>
+                        </div>
+                        <div class="flex items-center justify-center md:justify-start">
+                            <i class="fas fa-phone mr-3 text-brand-400"></i>
+                            <a href="tel:+3545522500" class="hover:text-white transition-colors">552-2500</a>
+                        </div>
+                        <div class="flex items-center justify-center md:justify-start">
+                            <i class="fas fa-envelope mr-3 text-brand-400"></i>
+                            <a href="mailto:litirogfondur@simnet.is" class="hover:text-white transition-colors">litirogfondur@simnet.is</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; 2025 Litir og Föndur. Allur réttur áskilinn.
+                </p>
+                <p class="text-gray-500 text-sm mt-2">
+                    Vefsíðuhönnun með nútímalegu útliti og notendavænu viðmóti
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to your external JavaScript file -->
+    <script src="script.js" defer></script>
+
+</body>
+</html>

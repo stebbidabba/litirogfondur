@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Litir og Föndur - Listir, föndur og sköpun</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            500: '#3b82f6',
+                            600: '#2563eb', 
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Link to your external CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="homepage bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50 text-gray-800 min-h-screen">
+
+    <!-- Header & Navigation -->
+    <header class="glass-nav fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 bg-gradient-to-br from-brand-500 to-brand-700 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:shadow-xl transition-all duration-300">
+                    L<span class="text-red-400">&</span>F
+                </div>
+                <span class="text-2xl font-playfair font-bold logo-text tracking-tight">Litir og Föndur</span>
+            </a>
+            
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <ul id="menu" class="hidden md:flex md:items-center md:space-x-8 text-base font-medium">
+                <li><a href="index.html" class="nav-link text-brand-700">Heim</a></li>
+                <li><a href="fyrirtaeki.html" class="nav-link">Fyrirtækið</a></li>
+                <li><a href="vorur.html" class="nav-link">Vörur</a></li>
+                <li><a href="frodleiksmolar.html" class="nav-link">Fróðleiksmolar</a></li>
+                <li><a href="#courses" class="nav-link">Námskeið</a></li>
+                <li><a href="#contact" class="nav-link">Samband</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu-hidden md:hidden">
+            <div class="px-6 py-4 bg-white/95 backdrop-blur-xl border-t border-gray-200/50">
+                <ul class="space-y-4">
+                    <li><a href="index.html" class="mobile-nav-link text-brand-700">Heim</a></li>
+                    <li><a href="fyrirtaeki.html" class="mobile-nav-link">Fyrirtækið</a></li>
+                    <li><a href="vorur.html" class="mobile-nav-link">Vörur</a></li>
+                    <li><a href="frodleiksmolar.html" class="mobile-nav-link">Fróðleiksmolar</a></li>
+                    <li><a href="#courses" class="mobile-nav-link">Námskeið</a></li>
+                    <li><a href="#contact" class="mobile-nav-link">Samband</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+            <!-- Background Image -->
+            <div class="absolute inset-0">
+                <img src="img/hero.jpg" alt="Art supplies and creative materials" class="w-full h-full object-cover" onerror="this.style.display='none';">
+                <div class="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-black/30"></div>
+            </div>
+            <!-- Fallback Background -->
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-indigo-500/5 to-purple-600/10"></div>
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%234f46e5" fill-opacity="0.03"%3E%3Ccircle cx="30" cy="30" r="4"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+            
+            <!-- Content -->
+            <div class="relative container mx-auto px-6 text-center reveal">
+                <div class="max-w-4xl mx-auto">
+                    <h1 class="text-5xl md:text-7xl font-playfair font-bold text-white mb-6 leading-tight drop-shadow-lg">
+                        Litir og <span class="text-blue-300">Föndur</span>
+                    </h1>
+                            <p class="hidden md:block text-lg md:text-xl text-gray-200 mb-12 max-w-2xl mx-auto drop-shadow">
+                                Úrval af list- og föndurvörum, litpensla, málningu og öllu sem þarf til að skapa eitthvað fallegt
+                            </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="#products" class="btn-primary group">
+                            <i class="fas fa-palette mr-2"></i>
+                            Skoða vörur
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="fyrirtaeki.html" class="btn-secondary group">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            Um okkur
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scroll indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <i class="fas fa-chevron-down text-white/70 text-xl drop-shadow"></i>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-20 bg-white relative">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-4xl font-playfair font-bold text-gray-900 mb-4">Hvað gerir okkur sérstaka?</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">Yfir 75 ára reynsla í þjónustu við myndlistarmenn og áhugafólk um handverk</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="glass-card reveal group">
+                        <div class="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl md:rounded-2xl flex items-center justify-center mb-4 md:mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-award text-white text-lg md:text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg md:text-2xl font-semibold text-gray-900 mb-3 md:mb-4 text-center">Gæði og reynsla</h3>
+                        <p class="text-gray-600 text-center text-sm md:text-base leading-relaxed">Þrjár kynslóðir af reynslu í myndlistarbransanum.</p>
+                    </div>
+                    
+                    <div class="glass-card reveal group">
+                        <div class="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl md:rounded-2xl flex items-center justify-center mb-4 md:mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-palette text-white text-lg md:text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg md:text-2xl font-semibold text-gray-900 mb-3 md:mb-4 text-center">Víðtækt úrval</h3>
+                        <p class="text-gray-600 text-center text-sm md:text-base leading-relaxed">Allt frá grunnefnum til háþróaðra verkfæra.</p>
+                    </div>
+                    
+                    <div class="glass-card reveal group">
+                        <div class="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl md:rounded-2xl flex items-center justify-center mb-4 md:mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-graduation-cap text-white text-lg md:text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg md:text-2xl font-semibold text-gray-900 mb-3 md:mb-4 text-center">Þekking og ráðgjöf</h3>
+                        <p class="text-gray-600 text-center text-sm md:text-base leading-relaxed">Starfsfólk með menntun veitir faglega ráðgjöf.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50/30">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-4xl font-playfair font-bold text-gray-900 mb-4">Vörur og þjónusta</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">Allt sem þú þarft til að láta drauminn um að skapa verða að veruleika</p>
+                </div>
+
+                <div class="circle-cards">
+                    <!-- Vörur (navigate to products page) -->
+                    <a href="vorur.html" class="circle-card pos-top reveal" aria-label="Vörur">
+                        <div>
+                            <div class="text-2xl title">Vörur</div>
+                            <div class="text-sm text-gray-600 mt-1">Skoða úrvalið</div>
+                        </div>
+                    </a>
+
+                    <!-- Námskeið (navigate to courses section) -->
+                    <a href="#courses" class="circle-card pos-left reveal" aria-label="Námskeið">
+                        <div>
+                            <div class="text-2xl title">Námskeið</div>
+                            <div class="text-sm text-gray-600 mt-1">Lærðu með okkur</div>
+                        </div>
+                    </a>
+
+                    <!-- Rammar og innramning (flip for info) -->
+                    <div class="circle-card pos-right flip-card reveal" data-flip>
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <div>
+                                    <div class="text-2xl title">Rammar og innramning</div>
+                                    <div class="text-sm text-gray-600 mt-1">Sjá þjónustu</div>
+                                </div>
+                            </div>
+                            <div class="flip-back">
+                                <div class="text-sm leading-relaxed">
+                                    Fagleg innrömmun, sérsniðnir rammar og gæðaefni sem vernda og lyfta verkinu þínu.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gjafir og bækur (flip for info) -->
+                    <div class="circle-card pos-bottom flip-card reveal" data-flip>
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <div>
+                                    <div class="text-2xl title">Gjafir og bækur</div>
+                                    <div class="text-sm text-gray-600 mt-1">Sjá nánar</div>
+                                </div>
+                            </div>
+                            <div class="flip-back">
+                                <div class="text-sm leading-relaxed">
+                                    Bækur, gjafasett og innblástur fyrir sköpun – frábærar gjafahugmyndir fyrir alla.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Location Section -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-4xl font-playfair font-bold text-gray-900 mb-4">Komdu í heimsókn</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">Við erum á einum stað í Kópavogi með næg bílastæði og góða aðgengi</p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="reveal">
+                        <div class="glass-card text-center lg:text-left">
+                            <div class="flex items-center justify-center lg:justify-start mb-6">
+                                <div class="w-16 h-16 bg-gradient-to-br from-brand-500 to-brand-600 rounded-2xl flex items-center justify-center">
+                                    <i class="fas fa-map-marker-alt text-white text-2xl"></i>
+                                </div>
+                            </div>
+                            
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-4">Staðsetning</h3>
+                            <p class="text-lg text-gray-600 mb-6"><strong>Smiðjuvegur 5, 200 Kópavogur</strong><br>750 fermetra verslun með frábæra þjónustu</p>
+                            
+                            <div class="space-y-4 mb-6">
+                                <div class="flex items-center justify-center lg:justify-start">
+                                    <i class="fas fa-clock text-brand-600 mr-3"></i>
+                                    <div>
+                                        <p class="font-semibold text-gray-900">Opnunartímar</p>
+                                        <p class="text-gray-600">Mán-Fös: 10:00-18:00</p>
+                                        <p class="text-gray-600">Laugardaga: 11:00-16:00</p>
+                                        <p class="text-gray-600">Sunnudaga: Lokað</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center justify-center lg:justify-start">
+                                    <i class="fas fa-phone text-brand-600 mr-3"></i>
+                                    <div>
+                                        <p class="font-semibold text-gray-900">Símar</p>
+                                        <p class="text-gray-600">
+                                            <a href="tel:+3545522500" class="hover:text-brand-600 transition-colors">552-2500</a> og 
+                                            <a href="tel:+3545512242" class="hover:text-brand-600 transition-colors">551-2242</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center justify-center lg:justify-start">
+                                    <i class="fas fa-envelope text-brand-600 mr-3"></i>
+                                    <div>
+                                        <p class="font-semibold text-gray-900">Netfang</p>
+                                        <p class="text-gray-600">
+                                            <a href="mailto:litirogfondur@simnet.is" class="hover:text-brand-600 transition-colors">litirogfondur@simnet.is</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center justify-center lg:justify-start">
+                                    <i class="fas fa-car text-brand-600 mr-3"></i>
+                                    <div>
+                                        <p class="font-semibold text-gray-900">Bílastæði</p>
+                                        <p class="text-gray-600">Fjöldi einkabílastæða við verslunina</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="reveal">
+                        <div class="glass-card">
+                            <img src="img/front.webp" alt="Art store interior" class="w-full h-80 object-cover rounded-2xl">
+                            <div class="p-6 text-center">
+                                <h4 class="text-xl font-semibold text-gray-900 mb-2">Velkominn í verslunina</h4>
+                                <p class="text-gray-600">Kynntu þér úrvalið okkar af list- og föndurvörum</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Google Maps Section -->
+                        <div class="mt-8">
+                            <div class="text-center mb-6">
+                                <h4 class="text-2xl font-playfair font-semibold text-gray-900 mb-2">Finndu okkur</h4>
+                                <p class="text-gray-600">Smiðjuvegur 5, 200 Kópavogur</p>
+                            </div>
+                            <div class="map-responsive rounded-2xl overflow-hidden shadow-2xl glass-card">
+                                <iframe 
+                                    title="Google Maps - Smiðjuvegur 5" 
+                                    src="https://www.google.com/maps?q=Smi%C3%B0juvegur%205%2C%20200%20K%C3%B3pavogur%2C%20Iceland&output=embed&z=15" 
+                                    loading="lazy" 
+                                    allowfullscreen
+                                    class="w-full h-96 lg:h-[28rem]"
+                                    style="border: 0;">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses" class="py-20 bg-gradient-to-br from-indigo-50/50 to-purple-50/30">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-4xl font-playfair font-bold text-gray-900 mb-4">Námskeið og vinnustofur</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">Lærðu nýja tækni með reyndum kennurum í vingjarnlegu umhverfi</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="glass-card reveal group cursor-pointer">
+                        <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-500 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-paint-brush text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3 text-center">Olíumálun fyrir byrjendur</h3>
+                        <p class="text-gray-600 text-center mb-4">Lærðu grunnatriði olíumálunar í 6 vikna námskeiði.</p>
+                        <div class="text-center">
+                            <span class="inline-block bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">Bráðlega</span>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-card reveal group cursor-pointer">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-palette text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3 text-center">Vatnslitartækni</h3>
+                        <p class="text-gray-600 text-center mb-4">Náðu tökum á vatnslitum og þeirra einstöku eiginleikum.</p>
+                        <div class="text-center">
+                            <span class="inline-block bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Opið</span>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-card reveal group cursor-pointer">
+                        <div class="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-cut text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3 text-center">Handverk og föndurvörur</h3>
+                        <p class="text-gray-600 text-center mb-4">Skapandi verkefni fyrir alla fjölskylduna.</p>
+                        <div class="text-center">
+                            <span class="inline-block bg-purple-100 text-purple-800 text-sm px-3 py-1 rounded-full">Hverjir helgi</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12 reveal">
+                    <a href="#contact" class="btn-secondary">
+                        <i class="fas fa-graduation-cap mr-2"></i>Frekari upplýsingar um námskeið
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
+        <!-- Background pattern -->
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.03"%3E%3Ccircle cx="20" cy="20" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        
+        <div class="relative container mx-auto px-6 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Company Info -->
+                <div class="text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-br from-brand-500 to-brand-700 rounded-xl flex items-center justify-center text-white font-bold">
+                            L<span class="text-red-400">&</span>F
+                        </div>
+                        <span class="text-2xl font-playfair font-bold">Litir og Föndur</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Íslands fremsta myndlistarverslun síðan 1947. Þrjár kynslóðir af þekkingu og þjónustu.
+                    </p>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="text-center md:text-left">
+                    <h4 class="text-lg font-semibold mb-6">Flýtileiðir</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#products" class="text-gray-300 hover:text-white transition-colors">Vörur</a></li>
+                        <li><a href="#courses" class="text-gray-300 hover:text-white transition-colors">Námskeið</a></li>
+                        <li><a href="fyrirtaeki.html" class="text-gray-300 hover:text-white transition-colors">Um okkur</a></li>
+                        <li><a href="frodleiksmolar.html" class="text-gray-300 hover:text-white transition-colors">Fróðleiksmolar</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors">Samband</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="text-center md:text-left">
+                    <h4 class="text-lg font-semibold mb-6">Samband</h4>
+                    <div class="space-y-3 text-gray-300">
+                        <div class="flex items-center justify-center md:justify-start">
+                            <i class="fas fa-map-marker-alt mr-3 text-brand-400"></i>
+                            <span>Smiðjuvegur 5, 200 Kópavogur</span>
+                        </div>
+                        <div class="flex items-center justify-center md:justify-start">
+                            <i class="fas fa-phone mr-3 text-brand-400"></i>
+                            <a href="tel:+3545522500" class="hover:text-white transition-colors">552-2500</a>
+                        </div>
+                        <div class="flex items-center justify-center md:justify-start">
+                            <i class="fas fa-envelope mr-3 text-brand-400"></i>
+                            <a href="mailto:litirogfondur@simnet.is" class="hover:text-white transition-colors">litirogfondur@simnet.is</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; 2025 Litir og Föndur. Allur réttur áskilinn.
+                </p>
+                <p class="text-gray-500 text-sm mt-2">
+                    Vefsíðuhönnun með nútímalegu útliti og notendavænu viðmóti
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to your external JavaScript file -->
+    <script src="script.js" defer></script>
+
+</body>
+</html>

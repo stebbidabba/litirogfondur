@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vörur - Litir og Föndur | Myndlistavörur og föndurvörur</title>
+    <meta name="description" content="Úrval af myndlistavörum og föndurvörum hjá Litir og Föndur. Penslar, málning, krítapappír og allt sem þarf til að skapa.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Link to your external CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50 text-gray-800 min-h-screen">
+
+    <!-- Header & Navigation -->
+    <header class="glass-nav fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 bg-gradient-to-br from-brand-500 to-brand-700 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:shadow-xl transition-all duration-300">
+                    L<span class="text-red-400">&</span>F
+                </div>
+                <span class="text-2xl font-playfair font-bold logo-text tracking-tight">Litir og Föndur</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <ul id="menu" class="hidden md:flex md:items-center md:space-x-8 text-base font-medium">
+                <li><a href="index.html" class="nav-link">Heim</a></li>
+                <li><a href="fyrirtaeki.html" class="nav-link">Fyrirtækið</a></li>
+                <li><a href="vorur.html" class="nav-link text-brand-700 active">Vörur</a></li>
+                <li><a href="frodleiksmolar.html" class="nav-link">Fróðleiksmolar</a></li>
+                <li><a href="index.html#courses" class="nav-link">Námskeið</a></li>
+                <li><a href="index.html#contact" class="nav-link">Samband</a></li>
+            </ul>
+
+            <!-- Mobile menu button -->
+            <button id="menu-toggle" class="md:hidden flex flex-col space-y-1 p-2" aria-label="Toggle menu" aria-expanded="false">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu-hidden md:hidden">
+            <div class="px-6 py-4 bg-white/95 backdrop-blur-xl border-t border-gray-200/50">
+                <ul class="space-y-4">
+                    <li><a href="index.html" class="mobile-nav-link">Heim</a></li>
+                    <li><a href="fyrirtaeki.html" class="mobile-nav-link">Fyrirtækið</a></li>
+                    <li><a href="vorur.html" class="mobile-nav-link text-brand-700">Vörur</a></li>
+                    <li><a href="frodleiksmolar.html" class="mobile-nav-link">Fróðleiksmolar</a></li>
+                    <li><a href="index.html#courses" class="mobile-nav-link">Námskeið</a></li>
+                    <li><a href="index.html#contact" class="mobile-nav-link">Samband</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section class="relative py-20 bg-gradient-to-br from-blue-600/10 via-indigo-500/5 to-purple-600/10">
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%234f46e5" fill-opacity="0.03"%3E%3Ccircle cx="30" cy="30" r="4"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+            
+            <div class="relative container mx-auto px-6 text-center">
+                <div class="max-w-4xl mx-auto reveal">
+                    <h1 class="text-4xl md:text-6xl font-playfair font-bold text-gray-900 mb-6 leading-tight">
+                        Vöru<span class="text-brand-600">úrval</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-600 mb-8">
+                        Allt sem þú þarft fyrir næsta listaverk þitt
+                    </p>
+                    <p class="text-lg text-gray-500 max-w-2xl mx-auto mb-8">
+                        Við bjóðum upp á úrval af hágæða myndlistavörum og föndurvörum frá bestu framleiðendum heims
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search and Filter Section -->
+        <section class="py-8 bg-white border-b border-gray-200">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col lg:flex-row gap-6 items-center justify-between">
+                    <!-- Search Bar -->
+                    <div class="flex-1 max-w-md">
+                        <div class="relative">
+                            <input 
+                                type="text" 
+                                id="product-search" 
+                                placeholder="Leita að vöru..." 
+                                class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all duration-300 bg-white shadow-sm"
+                            >
+                            <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                        </div>
+                    </div>
+
+					<!-- Category Filter Buttons -->
+					<div class="flex flex-wrap gap-3 justify-center lg:justify-end">
+						<button class="category-btn active" data-category="myndlistavörur">
+							<i class="fas fa-paint-brush mr-2"></i>Myndlistavörur
+						</button>
+						<button class="category-btn" data-category="föndurvörur">
+							<i class="fas fa-gem mr-2"></i>Föndurvörur
+						</button>
+					</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Grid Section -->
+        <section class="py-12 bg-gradient-to-br from-gray-50 to-blue-50/30">
+            <div class="container mx-auto px-6">
+                <!-- Loading State -->
+                <div id="loading-spinner" class="hidden text-center py-20">
+                    <div class="inline-block animate-spin rounded-full h-12 w-12 border-4 border-brand-500 border-t-transparent"></div>
+                    <p class="text-gray-600 mt-4">Hleður vörum...</p>
+                </div>
+
+					<!-- Products Grid -->
+					<div id="products-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+						<!-- Myndlistavörur -->
+						<div class="product-item product-mini reveal" data-category="myndlistavörur">
+							<h3>Palette tear off</h3>
+							<p>Pallettur</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="myndlistavörur">
+							<h3>Eden bordtrana</h3>
+							<p>Trönur</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="myndlistavörur">
+							<h3>Pallette hnifar</h3>
+							<p>Pallettuhnífar</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="myndlistavörur">
+							<h3>Basic Palette Angle</h3>
+							<p>Listmálara og skólalitir</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="myndlistavörur">
+							<h3>Hnífar</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="myndlistavörur">
+							<h3>daVinci penslar</h3>
+							<p>Penslar</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="myndlistavörur">
+							<h3>Teiknivörur</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="myndlistavörur">
+							<h3>Penslasápa 100</h3>
+							<p>Hreinsiefni</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="myndlistavörur">
+							<h3>Artists’ Matt Varnish</h3>
+							<p>Fernisar - Lakk</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="myndlistavörur">
+							<h3>Modelgínu</h3>
+							<p>Modelgínur</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="myndlistavörur">
+							<h3>Karton</h3>
+							<p>Innrömmunarkarton</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="myndlistavörur">
+							<h3>Caran d'Ache vörur</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="myndlistavörur">
+							<h3>Darice striga töng</h3>
+							<p>Aukahlutir tengdir myndlist</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="myndlistavörur">
+							<h3>Íblöndunarefni fyrir listmálaraliti</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="myndlistavörur">
+							<h3>Strigar og fl.</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="myndlistavörur">
+							<h3>Trélitir, blek og fl.</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="myndlistavörur">
+							<h3>Tússlitir</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="myndlistavörur">
+							<h3>Daler Rowney skrautskriftarblokk</h3>
+							<p>Pappír</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="myndlistavörur">
+							<h3>Kennslubækur í myndlist</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="myndlistavörur">
+							<h3>Pennastangir og oddar</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="myndlistavörur">
+							<h3>Prism myndvarpa</h3>
+							<p>Myndvarpar og ljósaborð</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="myndlistavörur">
+							<h3>Sprey</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="myndlistavörur">
+							<h3>Paint-by-numbers</h3>
+							<p>&nbsp;</p>
+						</div>
+
+						<!-- Föndurvörur -->
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Leir</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Áprentaðir myndir og fl.</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Kósar</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Útsaumsgarn fyrir plastjafa</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Pappír og Scrappvörur</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Prjónar</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Skartgripaefni</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Trévörur</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Leðurvörur</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Caran D’Ache pennar</h3>
+							<p>Pennar og fallblýantar</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Lím í alla föndurgerð</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Skæri - hnífar</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Stækkunarlampi</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Útsaumsplast</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Bucilla</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Fjaðrir</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Grunnföndurefni</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Prjónastrokkar</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Stenboden perlur 9/0</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Dúkkur</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Vef rammar</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Perlu uppskrift</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Dúkkustandar og skór</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Frauð-vatt-plast</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Perlu þráður - Saba</h3>
+							<p>Nálar - þræðir - glös</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Silki</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Föndurlitir DEKA</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Gifs og fl.</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Kertaskreytingarefni</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Bjöllur</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Borðar og renningar</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Brúðkaupsskraut og blóm</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Skapalón</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Fatalitir</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Taumálning</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Gyllingarefni</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Vír</h3>
+							<p>&nbsp;</p>
+						</div>
+						<div class="product-item product-mini reveal" data-category="föndurvörur">
+							<h3>Sculpture Block & Canvas</h3>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+
+				<!-- Load More Button removed for compact catalog -->
+
+                <!-- No Results Message -->
+                <div id="no-results" class="hidden text-center py-20">
+                    <div class="text-6xl text-gray-300 mb-4">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-700 mb-2">Engar vörur fundust</h3>
+                    <p class="text-gray-500">Prófaðu að breyta leitarskilyrðunum þínum</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Brands Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-4xl font-playfair font-bold text-gray-900 mb-4">Vörumerki sem við vinnum með</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">Við bjóðum upp á vörur frá bestu framleiðendum í heimi</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+                    <div class="brand-logo-container text-center p-6 rounded-2xl hover:bg-gray-50 transition-all duration-300 reveal group">
+                        <div class="brand-logo-wrapper">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Winsor_%26_Newton_logo.svg/300px-Winsor_%26_Newton_logo.svg.png" 
+                                 alt="Winsor & Newton" 
+                                 class="brand-logo h-12 w-auto mx-auto object-contain"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="brand-fallback text-lg font-semibold text-gray-600" style="display: none;">Winsor & Newton</div>
+                        </div>
+                    </div>
+                    <div class="brand-logo-container text-center p-6 rounded-2xl hover:bg-gray-50 transition-all duration-300 reveal group">
+                        <div class="brand-logo-wrapper">
+                            <img src="https://logos-world.net/wp-content/uploads/2021/02/Caran-dAche-Logo.png" 
+                                 alt="Caran d'Ache" 
+                                 class="brand-logo h-12 w-auto mx-auto object-contain"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="brand-fallback text-lg font-semibold text-gray-600" style="display: none;">Caran d'Ache</div>
+                        </div>
+                    </div>
+                    <div class="brand-logo-container text-center p-6 rounded-2xl hover:bg-gray-50 transition-all duration-300 reveal group">
+                        <div class="brand-logo-wrapper">
+                            <img src="https://www.davinci-defet.com/images/logo.png" 
+                                 alt="Da Vinci Brushes" 
+                                 class="brand-logo h-12 w-auto mx-auto object-contain"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="brand-fallback text-lg font-semibold text-gray-600" style="display: none;">Da Vinci</div>
+                        </div>
+                    </div>
+                    <div class="brand-logo-container text-center p-6 rounded-2xl hover:bg-gray-50 transition-all duration-300 reveal group">
+                        <div class="brand-logo-wrapper">
+                            <svg class="brand-logo h-12 w-auto mx-auto" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+                                <text x="100" y="40" text-anchor="middle" dominant-baseline="central" 
+                                      class="text-2xl font-bold fill-gray-700 font-serif">Stenboden</text>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="brand-logo-container text-center p-6 rounded-2xl hover:bg-gray-50 transition-all duration-300 reveal group">
+                        <div class="brand-logo-wrapper">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Faber-Castell_logo.svg/300px-Faber-Castell_logo.svg.png" 
+                                 alt="Faber-Castell" 
+                                 class="brand-logo h-12 w-auto mx-auto object-contain"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="brand-fallback text-lg font-semibold text-gray-600" style="display: none;">Faber-Castell</div>
+                        </div>
+                    </div>
+                    <div class="brand-logo-container text-center p-6 rounded-2xl hover:bg-gray-50 transition-all duration-300 reveal group">
+                        <div class="brand-logo-wrapper">
+                            <img src="https://www.liquitex.com/wp-content/themes/liquitex-new/images/liquitex-logo-black.svg" 
+                                 alt="Liquitex" 
+                                 class="brand-logo h-12 w-auto mx-auto object-contain"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="brand-fallback text-lg font-semibold text-gray-600" style="display: none;">Liquitex</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.02"%3E%3Ccircle cx="30" cy="30" r="4"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
+        
+        <div class="relative container mx-auto px-6 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-brand-500 to-brand-700 rounded-xl flex items-center justify-center text-white font-bold text-xl">
+                            L<span class="text-red-400">&</span>F
+                        </div>
+                        <span class="text-2xl font-playfair font-bold">Litir og Föndur</span>
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        Íslands fremsta myndlistarverslun síðan 1947. Við bjóðum upp á úrval af list- og föndurvörum fyrir alla aldurshópa.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="text-center md:text-left">
+                    <h4 class="text-lg font-semibold mb-6">Flýtileiðir</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#products" class="text-gray-300 hover:text-white transition-colors">Vöruflokkar</a></li>
+                        <li><a href="index.html#courses" class="text-gray-300 hover:text-white transition-colors">Námskeið</a></li>
+                        <li><a href="fyrirtaeki.html" class="text-gray-300 hover:text-white transition-colors">Um okkur</a></li>
+                        <li><a href="frodleiksmolar.html" class="text-gray-300 hover:text-white transition-colors">Fróðleiksmolar</a></li>
+                        <li><a href="index.html#contact" class="text-gray-300 hover:text-white transition-colors">Samband</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="text-center md:text-left">
+                    <h4 class="text-lg font-semibold mb-6">Samband</h4>
+                    <div class="space-y-3 text-gray-300">
+                        <div class="flex items-center justify-center md:justify-start">
+                            <i class="fas fa-map-marker-alt mr-3 text-brand-400"></i>
+                            <span>Smiðjuvegur 5, 200 Kópavogur</span>
+                        </div>
+                        <div class="flex items-center justify-center md:justify-start">
+                            <i class="fas fa-phone mr-3 text-brand-400"></i>
+                            <a href="tel:+3545522500" class="hover:text-white transition-colors">552-2500</a>
+                        </div>
+                        <div class="flex items-center justify-center md:justify-start">
+                            <i class="fas fa-envelope mr-3 text-brand-400"></i>
+                            <a href="mailto:litirogfondur@simnet.is" class="hover:text-white transition-colors">litirogfondur@simnet.is</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; 2024 Litir og Föndur. Öll réttindi áskilin.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script src="products.js"></script>
+</body>
+</html>
